@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sign Up — Smart Digital Library</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap" rel="stylesheet"/>
+  <style> body { font-family: "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; } </style>
+</head>
+
+
+<body class="bg-gray-50 dark:bg-gray-900 min-h-screen flex items-center justify-center p-6">
+  <div class="w-full max-w-md bg-white dark:bg-gray-800 rounded-xl shadow-md p-6">
+    <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-1">Create your account</h2>
+    <p class="text-sm text-gray-500 dark:text-gray-400 mb-6">Join our community — demo signup (client-side validation only).</p>
+
+    <form id="signupForm" class="space-y-4" novalidate>
+      <!-- Name -->
+      <div>
+        <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Full name</label>
+        <input id="name" name="name" type="text" autocomplete="name"
+               class="mt-1 block w-full rounded-lg border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+               placeholder="e.g. Abcd_or_John" required />
+        <p id="nameMsg" class="mt-1 text-xs text-gray-500 dark:text-gray-400">Allowed: letters and underscore only (A–Z, a–z, _).</p>
+      </div>
+
+      <!-- Email -->
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Gmail address</label>
+        <input id="email" name="email" type="email"
+               class="mt-1 block w-full rounded-lg border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+               placeholder="you@gmail.com" required
+               pattern="[a-zA-Z0-9._%+-]+@gmail\.com" />
+        <p id="emailMsg" class="mt-1 text-xs text-gray-500 dark:text-gray-400">Only addresses ending with <code>@gmail.com</code> are allowed.</p>
+      </div>
+
+      <!-- Password -->
+      <div>
+        <label for="password" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Password</label>
+        <input id="password" name="password" type="password" minlength="6"
+               class="mt-1 block w-full rounded-lg border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
+               placeholder="At least 6 characters" required />
+        <p id="passMsg" class="mt-1 text-xs text-gray-500 dark:text-gray-400">Minimum 6 characters.</p>
+      </div>
+
+      <div>
+        <button type="submit" class="w-full rounded-lg bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2">Sign up</button>
+      </div>
+    </form>
+
+    <div class="mt-4 text-center text-sm text-gray-600 dark:text-gray-300">
+      Already signed up? <a href="login.html" class="text-blue-600 hover:underline">Log in</a>
+    </div>
+
+    <div class="mt-3 text-center">
+      <a href="login.html" class="inline-block w-full text-center rounded-lg border border-gray-300 dark:border-gray-700 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700">Go to Login</a>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const form = document.getElementById('signupForm');
+      const nameInput = document.getElementById('name');
+      const emailInput = document.getElementById('email');
+      const passInput = document.getElementById('password');
+
+      const nameMsg = document.getElementById('nameMsg');
+      const emailMsg = document.getElementById('emailMsg');
+      const passMsg = document.getElementById('passMsg');
+
+      // validation regex
+      const nameRe = /^[A-Za-z_]+$/;
+      const gmailRe = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+
+      // live validation helpers
+      function validateName() {
+        const v = nameInput.value.trim();
+        if (v.length === 0) {
+          nameMsg.textContent = 'Name is required.';
+          nameMsg.className = 'mt-1 text-xs text-red-500';
+          return false;
+        }
+        if (!nameRe.test(v)) {
+          nameMsg.textContent = 'Only letters (A–Z, a–z) and underscore (_) are allowed — no spaces or digits.';
+          nameMsg.className = 'mt-1 text-xs text-red-500';
+          return false;
+        }
+        nameMsg.textContent = 'Looks good.';
+        nameMsg.className = 'mt-1 text-xs text-green-500';
+        return true;
+      }
+
+      function validateEmail() {
+        const v = emailInput.value.trim();
+        if (v.length === 0) {
+          emailMsg.textContent = 'Email is required.';
+          emailMsg.className = 'mt-1 text-xs text-red-500';
+          return false;
+        }
+        if (!gmailRe.test(v)) {
+          emailMsg.textContent = 'Please enter a valid Gmail address ending with @gmail.com';
+          emailMsg.className = 'mt-1 text-xs text-red-500';
+          return false;
+        }
+        emailMsg.textContent = 'Looks good.';
+        emailMsg.className = 'mt-1 text-xs text-green-500';
+        return true;
+      }
+
+      function validatePassword() {
+        const v = passInput.value;
+        if (v.length < 6) {
+          passMsg.textContent = 'Password must be at least 6 characters.';
+          passMsg.className = 'mt-1 text-xs text-red-500';
+          return false;
+        }
+        passMsg.textContent = 'Looks good.';
+        passMsg.className = 'mt-1 text-xs text-green-500';
+        return true;
+      }
+
+      // wire live validation
+      nameInput.addEventListener('input', validateName);
+      emailInput.addEventListener('input', validateEmail);
+      passInput.addEventListener('input', validatePassword);
+
+      // on submit
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const okName = validateName();
+        const okEmail = validateEmail();
+        const okPass = validatePassword();
+
+        if (!okName || !okEmail || !okPass) {
+          // show a pop-up summarizing errors
+          let msgs = [];
+          if (!okName) msgs.push('Name: only letters and underscore are allowed.');
+          if (!okEmail) msgs.push('Email: must end with @gmail.com.');
+          if (!okPass) msgs.push('Password: at least 6 characters.');
+          alert('Fix these first:\n\n' + msgs.join('\n'));
+          return;
+        }
+
+        // Demo action: save user to localStorage (for your prototype only)
+        try {
+          const usersKey = 'smart_library_demo_users';
+          const stored = JSON.parse(localStorage.getItem(usersKey) || '[]');
+          // check duplicate
+          if (stored.some(u => u.email.toLowerCase() === emailInput.value.trim().toLowerCase())) {
+            alert('An account with this Gmail address already exists. Please log in.');
+            return;
+          }
+
+          const user = {
+            name: nameInput.value.trim(),
+            email: emailInput.value.trim().toLowerCase(),
+            password: passInput.value // plaintext here only for demo; do not do this in production
+          };
+          stored.push(user);
+          localStorage.setItem(usersKey, JSON.stringify(stored));
+          alert('Signed up successfully! You can now log in.');
+          // optionally redirect to login page:
+          window.location.href = 'login.html';
+        } catch (err) {
+          console.error(err);
+          alert('Unexpected error — check console.');
+        }
+      });
+
+    })();
+  </script>
+</body>
+</html>

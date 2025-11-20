@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Student Dashboard - Smart Digital Library</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link css2?family="Manrope:wght@400;700;800&amp;display=swap" fonts.googleapis.com="" href="https=" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13a4ec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101c22",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-900 dark:text-white">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap px-4 sm:px-6 md:px-10 py-3 border-b border-gray-200 dark:border-gray-800">
+<div class="flex items-center gap-4">
+<div class="size-6 text-primary">
+<span class="material-symbols-outlined !text-4xl">
+                                local_library
+                            </span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Smart Digital Library</h2>
+</div>
+<nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+<a class="text-primary font-semibold" href="#">Home</a>
+<a class="text-gray-600 dark:text-gray-300 hover:text-primary" href="#">My Library</a>
+<a class="text-gray-600 dark:text-gray-300 hover:text-primary" href="#">Book Store</a>
+<a class="text-gray-600 dark:text-gray-300 hover:text-primary" href="#">Community</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 relative">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="flex items-center justify-center size-10 rounded-full bg-gray-200 dark:bg-gray-700 overflow-hidden">
+<img alt="User avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNw1-l6TFvBCrFnc_X0bQy9pZhzBKPv11r11lXOjHK5KXgf1Ev7H6mVFlkTpJLQpW29hMDIqOHAuoQ4KhQOU-VUZYrPSldDwse7q0k-i8k0aVT8FqoGKytP7w8GzW3jPkaickhFRdcGsbwFjdMMyUn6nDPRPtsGX9P8VWFQkpZuvjDlYPz8S7tdfBnodsGPTRDSWDeWqlccDMyvJXt6puAEbUo-IWcrRgEZ2-mB-L1yS58OVKAI8LRpbdBEpvBDjEKi0ItAuXo_w"/>
+</button>
+</div>
+</header>
+<main class="flex-1 w-full max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col md:flex-row gap-8">
+<aside class="w-full md:w-64 lg:w-72">
+<div class="space-y-6">
+<div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
+<h3 class="text-lg font-bold mb-4">My Progress</h3>
+<div class="space-y-4">
+<div>
+<div class="flex justify-between text-sm font-medium mb-1">
+<span>Reading Goal</span>
+<span>75%</span>
+</div>
+<div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+<div class="bg-primary h-2.5 rounded-full" style="width: 75%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-sm font-medium mb-1">
+<span>Courses Completed</span>
+<span>50%</span>
+</div>
+<div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+<div class="bg-primary h-2.5 rounded-full" style="width: 50%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-sm font-medium mb-1">
+<span>Study Milestones</span>
+<span>90%</span>
+</div>
+<div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+<div class="bg-primary h-2.5 rounded-full" style="width: 90%"></div>
+</div>
+</div>
+</div>
+</div>
+<div>
+<h3 class="text-lg font-bold mb-4">Categories</h3>
+<div class="space-y-2">
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" href="#">
+<span class="material-symbols-outlined">engineering</span>
+<span>Engineering</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" href="#">
+<span class="material-symbols-outlined">medical_services</span>
+<span>Medicine</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" href="#">
+<span class="material-symbols-outlined">history</span>
+<span>History</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" href="#">
+<span class="material-symbols-outlined">gavel</span>
+<span>Law</span>
+</a>
+</div>
+</div>
+<div>
+<h3 class="text-lg font-bold mb-4">Tools</h3>
+<div class="space-y-2">
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" href="#">
+<span class="material-symbols-outlined">build</span>
+<span>Study Tools</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" href="#">
+<span class="material-symbols-outlined">article</span>
+<span>Research Articles</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800" href="#">
+<span class="material-symbols-outlined">school</span>
+<span>Exam Prep</span>
+</a>
+</div>
+</div>
+</div>
+</aside>
+<div class="flex-1">
+<div class="mb-8">
+<h1 class="text-3xl font-extrabold tracking-tight mb-2">Welcome, Student!</h1>
+<p class="text-lg text-gray-500 dark:text-gray-400">Your personalized dashboard is ready.</p>
+</div>
+<div class="space-y-12">
+<section>
+<h2 class="text-2xl font-bold mb-4">Engineering</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden flex flex-col">
+<img alt="Book Cover" class="w-full h-48 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-9eo23KrZNyYe7-W2j6i269bR1blLbyVWsLLD-3T49kZjzxdYWuVz1-gwXzYv7DRKH2Bq2QnQZ5yCkAMTXkMwB1DcEXRGIjahqlKaCWJVwUXXQAkmP21rMveb_b92tQANPxf0lN2OhW2GrR41DrCaPZhHt7ii2mmNpb_DQiLQ3VQxLy0I8AdBP3AnqfnCcNsSosikZq-Y34HahdWFfHn5QZou5AOdZBxLkKi_rgUomHOXPyY_C-l5k5_qXlD4JZ9NKkDJUKUFWw"/>
+<div class="p-4 flex flex-col flex-1">
+<h3 class="text-lg font-bold leading-tight">Fundamentals of Engineering</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 mt-1">H. G. Stoker</p>
+<button class="mt-4 w-full min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="truncate">Start Reading</span>
+</button>
+</div>
+</div>
+<div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden flex flex-col">
+<img alt="Book Cover" class="w-full h-48 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBC2yZ2FHTFFdJgSPcYw8R69hZpuB2XE7ztFWbT552prQu4aIQBJYnz--GlyN3zVKSe5bGhbc_5MuMFxPU2qfZ0xV-SJxeMMHoaKesZr6jduStBrAMOYScgFE0NVZiO72qeRPtcJiyVqhPO1722u_tgwWgyhSXpDzaD7KZ0fqTPR1-rg-xxgV_roDiYwmdVDK4Ro2X3m37DjhGmEER_lr8FywNebfwHIG39WQUFh-aod92tVSj8WotviuOtjI6HRPy4yj2PT-sxdg"/>
+<div class="p-4 flex flex-col flex-1">
+<h3 class="text-lg font-bold leading-tight">Thermodynamics</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 mt-1">J. P. Holman</p>
+<button class="mt-4 w-full min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="truncate">Continue Reading</span>
+</button>
+</div>
+</div>
+<div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden flex flex-col">
+<img alt="Book Cover" class="w-full h-48 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAtBflBSXKMthU5I66j4uKqec-27nObBJ8Zl2TP2GNfv30mu8fkSXLpoQyAruEQ7i8_ti_gbnjKeEiuexVFHMcRyynUUpf1w0Asy-yHcs9CqwHbuhVK4zAzR8qXmLdi5gENp0QCpvTsNL3N8JMG_Syqj64u2srARXBEc2PWYljS2hLJzVyg39cQ5UcMEv1AKvdBA83gv-Q-NRwW0nfPLimZtcTucsPjEg9p5OBapK8-NVvI3lOH4z_OXFDDDL-RyUrmnJ9ivYvQg"/>
+<div class="p-4 flex flex-col flex-1">
+<h3 class="text-lg font-bold leading-tight">Mechanics of Materials</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 mt-1">R. C. Hibbeler</p>
+<button class="mt-4 w-full min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
+<span class="truncate">View Resource</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<section>
+<h2 class="text-2xl font-bold mb-4">Medicine</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden flex flex-col">
+<img alt="Book Cover" class="w-full h-48 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfxLOA93hbhiXxUBlcLf_mPA5_kde-oBfTNEi2Qt4NIRPAIv32h9LNUDG9FxufiETGn5biK2WeKTUMTpo3gxhdzTGf0175f3Vr4aXouNF_fqfoOZp_EaQaUz4pNMVQwd2lPGCT79GkQi-jl6cGYM6MZQynmrcvhcq6yRi71BTMuovWFYg7Z999Wbrj7xSidFy_Ij0NaAX6n_5jJSzWJncNpZ2aw0_k_hO1IW0nIqUrHH5icjF7NfP6FD4w_hVV44IvoxrBH8FkPg"/>
+<div class="p-4 flex flex-col flex-1">
+<h3 class="text-lg font-bold leading-tight">Gray's Anatomy</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Henry Gray</p>
+<button class="mt-4 w-full min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="truncate">Start Reading</span>
+</button>
+</div>
+</div>
+<div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden flex flex-col">
+<img alt="Book Cover" class="w-full h-48 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUCQL3nK97vM_MW6C4JZ2ZUEOjrnp610_quuahvIunX9haVczuAPcTe7I8ebrRb25hZWBP5UOUvUGjW8F379mtGVeWhK4sVg-FueYbh8dhu6yHwHP4ptNvELgxzfhL2156ZZ7pEI-eiL5gX1aKNZqBGCZ7mVyykn4sOPd2u-q5-3uNTqKxBAITd1a0zl07WlG9D0q6C-ye4XGS5gP770lRsp8b2qxdTOXSp5vmHZBYBAqkM3I3uvaX_xI50qxvZqvvZRAu-w5LvQ"/>
+<div class="p-4 flex flex-col flex-1">
+<h3 class="text-lg font-bold leading-tight">Principles of Biochemistry</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Lehninger</p>
+<button class="mt-4 w-full min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
+<span class="truncate">View Resource</span>
+</button>
+</div>
+</div>
+<div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden flex flex-col">
+<img alt="Book Cover" class="w-full h-48 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDljJWmYvvALes5osD1gRqLcj3L0EfwxQCLFJJlTFInJSPk3NUNlb1NBdeJpvJozydFYsd3vvoS8f-NYW3xlvgtlWTyw3ZjTxQJJPY1xWVO-c25acJn4c2redc_BE-DOHyOxltkJdVt1JoJMlA88iejIqPR5zrfZqUnvHVAGuDBK-j3_1F83u46iDPqTQ407qsXm-VbB2B6M0ElZD3P911U1-JvQVu10bZ5Lg31dU9yWrV3ATEX9W07OpRTJzXPedwKs1ZxNpVddw"/>
+<div class="p-4 flex flex-col flex-1">
+<h3 class="text-lg font-bold leading-tight">Medical Physiology</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Guyton and Hall</p>
+<button class="mt-4 w-full min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="truncate">Start Reading</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Your Purchases - Smart Digital Library</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#5A96E3",
+            "secondary": "#F0F4F8",
+            "accent": "#FFC857",
+            "text-primary": "#333333",
+            "text-secondary": "#666666",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101c22",
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#e7eff3] dark:border-gray-700 px-10 py-3 bg-white dark:bg-background-dark">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-text-primary dark:text-white">
+<div class="size-6 text-primary">
+<span class="material-symbols-outlined !text-4xl">
+                local_library
+              </span>
+</div>
+<h2 class="text-text-primary dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Smart Digital Library</h2>
+</div>
+<div class="flex items-center gap-9">
+<a class="text-text-primary dark:text-gray-300 text-sm font-medium leading-normal" href="index.html">Home</a>
+<a class="text-text-primary dark:text-gray-300 text-sm font-medium leading-normal" href="books.html">Browse</a>
+<a class="text-text-primary dark:text-gray-300 text-sm font-medium leading-normal" href="aboutus.html">About Us</a>
+</div>
+</div>
+<div class="flex flex-1 justify-end items-center gap-4">
+<label class="flex flex-col min-w-40 !h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-text-secondary dark:text-gray-400 flex border-none bg-secondary dark:bg-gray-800 items-center justify-center pl-4 rounded-l-lg border-r-0">
+<span class="material-symbols-outlined">
+                  search
+                </span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-lg text-text-primary dark:text-white focus:outline-0 focus:ring-0 border-none bg-secondary dark:bg-gray-800 focus:border-none h-full placeholder:text-text-secondary dark:placeholder:text-gray-400 px-4 pl-2 text-base font-normal leading-normal" placeholder="Search" value=""/>
+</div>
+</label>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Your Purchases</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCRzM0hwsReA0PEzygHupnPUppIjeRC98RYKB2lqpovVGKAOEiUkuQfnS4wl3Yr8O_9cOXZZuGoti-2Ld9vHJeFs7INv6rza82_fimj6mHKm2iktilb8AclQuOTJU2_mA1inIS2EbfJimcklwCfbgcOPXkrro3ki016XwXUeVYolGAvpcox75HCh3f-07yCcCVzUrRkLihMSIor00-skwz14i9_ol_oIKOK1gK2wBaloQ14UyVwmm2lhJkMvF45lInFgH0lQETEZQ");'></div>
+</div>
+</header>
+<div class="px-10 md:px-20 lg:px-40 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<div class="flex flex-wrap justify-between gap-3 p-4">
+<p class="text-text-primary dark:text-white text-4xl font-black leading-tight tracking-[-0.033em] min-w-72">Your Purchases</p>
+</div>
+<div class="pb-3">
+<div class="flex border-b border-[#cfdfe7] dark:border-gray-700 px-4 gap-8">
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-primary text-text-primary dark:text-white pb-[13px] pt-4" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Your Orders</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-text-secondary dark:text-gray-400 pb-[13px] pt-4" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Saved Books</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-text-secondary dark:text-gray-400 pb-[13px] pt-4" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Liked Books</p>
+</a>
+</div>
+</div>
+<div class="px-4 py-3">
+<label class="flex flex-col min-w-40 h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-text-secondary dark:text-gray-400 flex border-none bg-secondary dark:bg-gray-800 items-center justify-center pl-4 rounded-l-lg border-r-0">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-lg text-text-primary dark:text-white focus:outline-0 focus:ring-0 border-none bg-secondary dark:bg-gray-800 focus:border-none h-full placeholder:text-text-secondary dark:placeholder:text-gray-400 px-4 pl-2 text-base font-normal leading-normal" placeholder="Search by title, author, or order number" value=""/>
+</div>
+</label>
+</div>
+<div class="grid grid-cols-1 gap-6 p-4">
+<!-- Order Card 1 -->
+<div class="flex items-stretch justify-between gap-6 rounded-lg bg-secondary dark:bg-gray-800 p-6">
+<div class="w-1/4 bg-center bg-no-repeat aspect-[2/3] bg-cover rounded-lg" data-alt="Book cover of The Midnight Library" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCwEClZ9t9YA11goHWft_j_ojaPd7zittt2-eHwsWs_fMdP6K7FtI_Mmm5BJe-FmDCLS1snOvI7o2tWgVqUOndHF7ja3ZPzHxUu4Uq5tPmPcR8EPaNj5P4lWu59c7h1mMoZCxMbmYJ8JBhhqE6Bgi2gnxC-Ak-yl8DwTlaMgVcULrF6oZhLopZmIer1l2fNcWrWs_gdHSN4wwNlla_THYJW7XK_CIZ9Zt0ZOkoSKDtn-xteegAruyciXJS879KesWV4RsUj6A5jCA");'></div>
+<div class="flex flex-col flex-1 gap-4 justify-between">
+<div>
+<p class="text-text-primary dark:text-white text-xl font-bold leading-tight">The Midnight Library</p>
+<p class="text-text-secondary dark:text-gray-400 text-sm font-normal leading-normal">By Matt Haig</p>
+</div>
+<div>
+<p class="text-text-secondary dark:text-gray-400 text-xs">Order Number: #12345-67890</p>
+<p class="text-text-secondary dark:text-gray-400 text-xs">Purchase Date: 12/03/2024</p>
+</div>
+<div class="flex items-center justify-between">
+<p class="text-text-primary dark:text-white text-lg font-bold">$14.99</p>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Read Now</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Order Card 2 -->
+<div class="flex items-stretch justify-between gap-6 rounded-lg bg-secondary dark:bg-gray-800 p-6">
+<div class="w-1/4 bg-center bg-no-repeat aspect-[2/3] bg-cover rounded-lg" data-alt="Book cover of Project Hail Mary" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB-lSvOsgWqJf9JCFmnt6Di1nret3C09N1QD2durDegc6JVQ7hSyil6q4ajLwPB4jzXeJda0L2eCKdeGL2Wqv4Il4eurUwE0pAw7uDVP9vMLqMH8qoH3TRpU_aYzZ6gBeVgn6jrHBYg1B8MMNNBAcgm2bRObKop56tj3zY36zTy-7FfQ6x2I6GwXoK9myWFGAW0C49oC6puWtRhgOTSMjfR5T68OkXpFBCEb0ULNavNdTZEUb_2_IIMsqVZaQ9gW_pOfbMSKqNupQ");'></div>
+<div class="flex flex-col flex-1 gap-4 justify-between">
+<div>
+<p class="text-text-primary dark:text-white text-xl font-bold leading-tight">Project Hail Mary</p>
+<p class="text-text-secondary dark:text-gray-400 text-sm font-normal leading-normal">By Andy Weir</p>
+</div>
+<div>
+<p class="text-text-secondary dark:text-gray-400 text-xs">Order Number: #09876-54321</p>
+<p class="text-text-secondary dark:text-gray-400 text-xs">Purchase Date: 10/03/2024</p>
+</div>
+<div class="flex items-center justify-between">
+<p class="text-text-primary dark:text-white text-lg font-bold">$18.99</p>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Read Now</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Empty State Example -->
+<div class="flex flex-col items-center justify-center gap-4 rounded-lg bg-secondary dark:bg-gray-800 p-12 text-center hidden">
+<span class="material-symbols-outlined text-6xl text-text-secondary dark:text-gray-500">
+                sentiment_dissatisfied
+              </span>
+<p class="text-text-primary dark:text-white text-xl font-bold">You have no orders yet.</p>
+<p class="text-text-secondary dark:text-gray-400">Start exploring our library and find your next great read!</p>
+<button class="mt-4 flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Browse Books</span>
+</button>
+</div>
+<!-- Pagination -->
+<div class="flex justify-center items-center gap-2 mt-4">
+<button class="flex items-center justify-center rounded-lg size-10 bg-secondary dark:bg-gray-800 text-text-secondary dark:text-gray-400">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="flex items-center justify-center rounded-lg size-10 bg-primary text-white">1</button>
+<button class="flex items-center justify-center rounded-lg size-10 bg-secondary dark:bg-gray-800 text-text-primary dark:text-white">2</button>
+<button class="flex items-center justify-center rounded-lg size-10 bg-secondary dark:bg-gray-800 text-text-primary dark:text-white">3</button>
+<button class="flex items-center justify-center rounded-lg size-10 bg-secondary dark:bg-gray-800 text-text-secondary dark:text-gray-400">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>

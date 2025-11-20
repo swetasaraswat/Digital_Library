@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login </title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+</head>
+<body class="bg-gray-50 min-h-screen flex items-center justify-center p-6">
+  <div class="w-full max-w-md bg-white rounded-xl shadow-md p-6">
+    <h2 class="text-2xl font-bold mb-2">Login</h2>
+    <p class="text-sm text-gray-600 mb-4">Enter your Gmail and password to proceed.</p>
+
+    <form id="loginForm" class="space-y-4" novalidate>
+      <div>
+        <label class="block text-sm">Gmail</label>
+        <input id="email" name="email" required type="email"
+               class="mt-1 block w-full border rounded px-3 py-2" placeholder="you@gmail.com" />
+        <p id="emailHint" class="text-xs text-gray-500 mt-1">Only addresses ending with <code>@gmail.com</code>.</p>
+      </div>
+
+      <div>
+        <label class="block text-sm">Password</label>
+        <input id="password" name="password" required type="password" minlength="6"
+               class="mt-1 block w-full border rounded px-3 py-2" placeholder="At least 6 characters" />
+        <p id="passHint" class="text-xs text-gray-500 mt-1">Minimum 6 characters.</p>
+      </div>
+
+      <button type="submit" class="w-full bg-blue-600 text-white rounded px-4 py-2">Log in</button>
+    </form>
+    <div class="mt-4 text-center text-sm text-gray-600">
+    Don't have an account?
+    <a href="sign.html" class="text-blue-600 hover:underline">Sign up</a>
+</div>
+ 
+<a href="sign.html"
+   class="mt-3 block text-center w-full bg-blue-500 text-white rounded-lg px-4 py-2">
+   Create Account
+</a>
+  </div>
+
+<script>
+(function(){
+  const form = document.getElementById('loginForm');
+  const emailEl = document.getElementById('email');
+  const passEl = document.getElementById('password');
+
+  // strict gmail regex
+  const gmailRe = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+
+  // prevent actual form submission (no server). Use validation + redirect
+  form.addEventListener('submit', function(e){
+    e.preventDefault(); // important: stop the form's default submit
+
+    const email = (emailEl.value || '').trim();
+    const pass = passEl.value || '';
+
+    // validation
+    if (!gmailRe.test(email)) {
+      alert('Please enter a valid Gmail address ending with @gmail.com');
+      emailEl.focus();
+      return;
+    }
+    if (pass.length < 6) {
+      alert('Password must be at least 6 characters long.');
+      passEl.focus();
+      return;
+    }
+
+    // success: redirect to students.html
+    // ensure students.html exists in same folder
+    window.location.href = 'students.html';
+  });
+})();
+</script>
+</body>
+</html>

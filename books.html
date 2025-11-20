@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Book Store - Smart Digital Library</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13a4ec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101c22",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-900 dark:text-white">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap px-4 sm:px-6 md:px-10 py-3 border-b border-gray-200 dark:border-gray-800">
+<div class="flex items-center gap-4">
+<div class="size-6 text-primary">
+<span class="material-symbols-outlined !text-4xl">
+                                local_library
+                            </span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Smart Digital Library</h2>
+</div>
+<nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+<a class="text-gray-600 dark:text-gray-300 hover:text-primary" href="index.html">Home</a>
+<a class="text-gray-600 dark:text-gray-300 hover:text-primary" href="your purchase.html">My Library</a>
+<a class="text-primary font-semibold" href="#">Book Store</a>
+<a class="text-gray-600 dark:text-gray-300 hover:text-primary" href="aboutus.html">Community</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800">
+<span class="material-symbols-outlined"><a href="your purchase.html">shopping_cart</a></span>
+</button>
+<button class="flex items-center justify-center size-10 rounded-full bg-gray-200 dark:bg-gray-700">
+<span class="material-symbols-outlined">person</span>
+</button>
+</div>
+</header>
+<main class="flex-1 w-full max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col md:flex-row gap-8">
+<aside class="w-full md:w-64 lg:w-72">
+<div class="space-y-6">
+<div>
+<h3 class="text-lg font-bold mb-4">Filters</h3>
+<div class="space-y-4">
+<div>
+<label class="block text-sm font-medium text-gray-500 dark:text-gray-400" for="genre">Genre</label>
+<select class="form-select mt-1 block w-full rounded-lg border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-primary focus:border-primary" id="genre" name="genre">
+<option>All Genres</option>
+<option>Science Fiction</option>
+<option>Fantasy</option>
+<option>Mystery</option>
+<option>Non-Fiction</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-500 dark:text-gray-400" for="author">Author</label>
+<input class="form-input mt-1 block w-full rounded-lg border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-primary focus:border-primary" id="author" name="author" placeholder="e.g. Isaac Asimov" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-500 dark:text-gray-400" for="publication-date">Publication Date</label>
+<input class="form-input mt-1 block w-full rounded-lg border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-primary focus:border-primary" id="publication-date" name="publication-date" type="date"/>
+</div>
+</div>
+</div>
+</div>
+</aside>
+<div class="flex-1">
+<div class="flex flex-col sm:flex-row justify-between items-baseline mb-6">
+<h1 class="text-3xl font-extrabold tracking-tight">Book Store</h1>
+<div class="flex items-center gap-2">
+<label class="text-sm font-medium text-gray-500 dark:text-gray-400" for="sort-by">Sort by:</label>
+<select class="form-select rounded-lg border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-primary focus:border-primary" id="sort-by" name="sort-by">
+<option>Relevance</option>
+<option>Newest</option>
+<option>Price: Low to High</option>
+<option>Price: High to Low</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+<div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden flex flex-col transition-transform duration-300 hover:scale-105">
+<img alt="Book Cover" class="w-full h-56 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA63faKDOx1ULaQfOmVMP3osZbxPW2AOeWfS2f1JJZni-bgyIDKdSdzUltC1RY_DBbTCnCMvQF-EsKaGbh3YVV-jFVk-PV3C3qD_99hzjezFGTYci2YsoOsk1YHHh_awPuxxS9bcw3KpprTHuKLhxyWfem76nFPHLm2iYy7hEo-GNKNqNh6CsmOtG5zQyQJfuEX9WD9xpwGrWJs6-i2uUdWyU5mRs6jMt-skhPAnwi-b75VVE4lqKRGmKszRqHCXY_UuhntuJgvjA"/>
+<div class="p-4 flex flex-col flex-1">
+<h3 class="text-lg font-bold leading-tight">The Midnight Library</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Matt Haig</p>
+<p class="text-lg font-bold text-primary mt-2"> ₹14.99</p>
+<div class="mt-4 flex gap-2">
+<button class="flex-1 min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="truncate">Buy Now</span>
+</button>
+<button class="flex items-center justify-center min-w-[40px] h-10 px-3 rounded-lg bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
+<span class="material-symbols-outlined text-base">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden flex flex-col transition-transform duration-300 hover:scale-105">
+<img alt="Book Cover" class="w-full h-56 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTbXS0awJjH1s4ShgBG-oW3rWZMcpQGFhlVSm_8RBUc3wqLtwWlf0nsi92mNN6j39pAkSSO7ZLp6O_co8pxECN_jjb_vR22Ul9MPisY02O956L_we5GlZz36BjppmlK9aEeiSuQqSxv-4wN3xQ-oOz0kuw2OlASz9v1TeHVpU4fr8iWOkLSr-E9LMV0RE6BauPd1waJdQO7hVAorX0c_yrbvAZI0kWhWCQuIRhuKdIyDdL2Ho6zIhFffROgvHbD2CHTBBf_PSszg"/>
+<div class="p-4 flex flex-col flex-1">
+<h3 class="text-lg font-bold leading-tight">Project Hail Mary</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Andy Weir</p>
+<p class="text-lg font-bold text-primary mt-2">₹18.50</p>
+<div class="mt-4 flex gap-2">
+<button class="flex-1 min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="truncate">Buy Now</span>
+</button>
+<button class="flex items-center justify-center min-w-[40px] h-10 px-3 rounded-lg bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
+<span class="material-symbols-outlined text-base">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden flex flex-col transition-transform duration-300 hover:scale-105">
+<img alt="Book Cover" class="w-full h-56 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEPrwlgpy-1frI86V8dDM1GaZwno65hsheC3HZgwxcHcTtvvUJI5ulUcIiUCX1A7clJrQwLGiFbPnvYlB6GQytiM7kRKDxadwU_D97Hfnvs4TdkRp-zN8Z7laAze_WMolksnvEO0jaJE9TFz0yUwT0qXTA1HCSrZ-m_36sQm8mYAGyvihiuY4HqADY97qsfyO4Kl64EJrzoN6r3PvmNhdM_Q_7BfCpIhiLrpSM8y7pqQ3jdssFQdLskbzqJq5DGxbtK6Qa0ftHag"/>
+<div class="p-4 flex flex-col flex-1">
+<h3 class="text-lg font-bold leading-tight">Klara and the Sun</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Kazuo Ishiguro</p>
+<p class="text-lg font-bold text-primary mt-2">₹16.99</p>
+<div class="mt-4 flex gap-2">
+<button class="flex-1 min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="truncate">Buy Now</span>
+</button>
+<button class="flex items-center justify-center min-w-[40px] h-10 px-3 rounded-lg bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
+<span class="material-symbols-outlined text-base">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden flex flex-col transition-transform duration-300 hover:scale-105">
+<img alt="Book Cover" class="w-full h-56 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTJd8QYwdBYsUk8aH-kRfowixSnyEdngpDuzpTsDuEqj0B99Vx9klZKl6Zq0qmnAaLS8HSuIc9YYAPU6r-vL8hH0piGKV9mwRAJxJccwwutTAk2fGglxO-wcbSpYT98d-lLI0Pof6BXTrDnMqoC328E9FO0CU38XWX0SE-FHXgVfc3qLqexsJe2QYymiQRDUMypwt-YbxWOU7XQS7J-XUYA7Bo1iTnby9EYCoX1JOKsGuGfO7QvPA6xhFlrmgvAmaRgaTGmLmhHg"/>
+<div class="p-4 flex flex-col flex-1">
+<h3 class="text-lg font-bold leading-tight">The Vanishing Half</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Brit Bennett</p>
+<p class="text-lg font-bold text-primary mt-2">₹12.99</p>
+<div class="mt-4 flex gap-2">
+<button class="flex-1 min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="truncate">Buy Now</span>
+</button>
+<button class="flex items-center justify-center min-w-[40px] h-10 px-3 rounded-lg bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
+<span class="material-symbols-outlined text-base">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden flex flex-col transition-transform duration-300 hover:scale-105">
+<img alt="Book Cover" class="w-full h-56 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJcRRmdUUPEch_7PbVaieN-IcHCi_h3fpSvNjBIJwFqeWrSjyVoh4yAoz6rk5hPLkfFRtFSXVJ76iFNL413bpG3WoDm_70-p9AO91VTKE0RSy3weVPh5TGh1J7jFgveYvaKpkhrbIHPEcvaJUrOHrmqZjGDAClN4MA595IvZvVnd51hUwLkZRrUr_jb-IGLRllBNhdCsk-KrFZ8gLEI3kXmuEip9oZlrHqzIn32FtHc0VAbdSEIN_ZCqXzCQ7T1KJIZM85KbpMdQ"/>
+<div class="p-4 flex flex-col flex-1">
+<h3 class="text-lg font-bold leading-tight">Dune</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Frank Herbert</p>
+<p class="text-lg font-bold text-primary mt-2">₹10.99</p>
+<div class="mt-4 flex gap-2">
+<button class="flex-1 min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="truncate">Buy Now</span>
+</button>
+<button class="flex items-center justify-center min-w-[40px] h-10 px-3 rounded-lg bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
+<span class="material-symbols-outlined text-base">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden flex flex-col transition-transform duration-300 hover:scale-105">
+<img alt="Book Cover" class="w-full h-56 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBULZQddznglMIbteISjZB83IHdzDg8ZHDdEgzEg44wYyxefc4kU9DMVcUPiy6J1d2gS7GnyKgvwtsWHVAAFowdUMHd0ZaXowcnzHXiLftfEFKMt-yQn2vlpgl117p1dGl4yTTum-H-Y1l_MMswT99JcFyIbDFQJPcqEMXQkHgY7RwY1GSkvzCjvXiWuc1-g7vhZ22V4BF77MK6eu_OHXoPiuopgTjSMDUHHumHHKIsv_hiWhUyATRR6BZvsS-Z8CKF3y2Bl243Ow"/>
+<div class="p-4 flex flex-col flex-1">
+<h3 class="text-lg font-bold leading-tight">The Song of Achilles</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Madeline Miller</p>
+<p class="text-lg font-bold text-primary mt-2">₹11.99</p>
+<div class="mt-4 flex gap-2">
+<button class="flex-1 min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="truncate">Buy Now</span>
+</button>
+<button class="flex items-center justify-center min-w-[40px] h-10 px-3 rounded-lg bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
+<span class="material-symbols-outlined text-base">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

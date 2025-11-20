@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Smart Digital Library</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13a4ec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101c22",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem", 
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+        .a{
+            text-decoration:none;
+        }
+        .bo{
+            text-decoration:none;
+        }
+        .purchase{
+            text-decoration:none; 
+         
+          background-color:#13a4ec;
+          
+          border-radius:4px;
+
+        }
+        .login{
+            text-decoration:none;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 md:px-10 lg:px-20 xl:px-40 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col max-w-[1200px] flex-1">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 dark:border-gray-700 px-4 sm:px-6 md:px-10 py-3">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-gray-900 dark:text-white">
+<div class="size-6 text-primary">
+<span class="material-symbols-outlined !text-4xl">
+                                        local_library
+                                    </span>
+</div>
+<h2 class="text-gray-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Smart Digital Library</h2>
+</div>
+</div>
+<div class="flex-1 px-8 hidden md:flex justify-center">
+<label class="flex flex-col w-full !h-10 max-w-lg">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-gray-500 dark:text-gray-400 flex border-none bg-gray-100 dark:bg-gray-800 items-center justify-center pl-4 rounded-l-lg border-r-0">
+<span class="material-symbols-outlined">
+                                            search
+                                        </span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-gray-900 dark:text-white focus:outline-0 focus:ring-0 border-none bg-gray-100 dark:bg-gray-800 focus:border-none h-full placeholder:text-gray-500 dark:placeholder:text-gray-400 px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal" placeholder="Search books, authors..." value=""/>
+</div>
+</label>
+</div>
+<div class="flex flex-1 justify-end gap-2">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="truncate"><a href="signin.html" class="a">Sign up</a>
+</span>
+
+</button>
+
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
+<span class="truncate"><a href="login.html" class="login">Login</a></span>
+</button>
+</div>
+</header>
+<main class="flex-1">
+<div class="@container py-8">
+<div class="@[480px]:p-4">
+<div class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4" data-alt="Abstract gradient background with blue and teal hues" style='background-image: linear-gradient(rgba(16, 28, 34, 0.5) 0%, rgba(16, 28, 34, 0.7) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuByQiwfEKtNnXKE8XwPLOU6STPodrkp8BDV2rPni0dvqHgth7JhcceTac0hIztrM88zGiOkg3imKZAJcFAAZCyZD0INZndA3eYx2JpTGxvkAw4aWKZTOEL9WYdUOx54MGlx1pjfY5E6pubxhnP6pf-2P47fKuteHHlkw5Ps-ELO3mkFDU9T9FAZdRrvibo5kSwXwOe2PkKmgqCNcmhjoKjuntDspnkuBYIBuqWigkMIVLja9PKw8zU1ba2aKg-Rt48kTx-TZE4DIQ");'>
+<div class="flex flex-col gap-2 text-center">
+<h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]">
+                                            Your Gateway to Smarter Reading
+                                        </h1>
+<h2 class="text-gray-200 text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal max-w-2xl">
+                                            Access a vast collection of digital books and resources for students, teachers, and casual readers.
+                                        </h2>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em] hover:bg-primary/90 transition-transform transform hover:scale-105">
+<span class="truncate"><a href="books.html" class="bo">Explore Library</a></span>
+</button>
+</div>
+</div>
+</div>
+<section class="py-8">
+<h2 class="text-gray-900 dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Popular Genres</h2>
+<div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-4 p-4">
+<div class="flex flex-1 gap-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-background-light dark:bg-background-dark p-4 items-center hover:shadow-lg hover:border-primary/50 dark:hover:border-primary/50 transition-all transform hover:-translate-y-1">
+<div class="text-primary"><span class="material-symbols-outlined">science</span></div>
+<h2 class="text-gray-900 dark:text-white text-base font-bold leading-tight">Science</h2>
+</div>
+<div class="flex flex-1 gap-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-background-light dark:bg-background-dark p-4 items-center hover:shadow-lg hover:border-primary/50 dark:hover:border-primary/50 transition-all transform hover:-translate-y-1">
+<div class="text-primary"><span class="material-symbols-outlined">auto_stories</span></div>
+<h2 class="text-gray-900 dark:text-white text-base font-bold leading-tight">Literature</h2>
+</div>
+<div class="flex flex-1 gap-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-background-light dark:bg-background-dark p-4 items-center hover:shadow-lg hover:border-primary/50 dark:hover:border-primary/50 transition-all transform hover:-translate-y-1">
+<div class="text-primary"><span class="material-symbols-outlined">self_improvement</span></div>
+<h2 class="text-gray-900 dark:text-white text-base font-bold leading-tight">Self-Help</h2>
+</div>
+<div class="flex flex-1 gap-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-background-light dark:bg-background-dark p-4 items-center hover:shadow-lg hover:border-primary/50 dark:hover:border-primary/50 transition-all transform hover:-translate-y-1">
+<div class="text-primary"><span class="material-symbols-outlined">computer</span></div>
+<h2 class="text-gray-900 dark:text-white text-base font-bold leading-tight">Technology</h2>
+</div>
+<div class="flex flex-1 gap-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-background-light dark:bg-background-dark p-4 items-center hover:shadow-lg hover:border-primary/50 dark:hover:border-primary/50 transition-all transform hover:-translate-y-1">
+<div class="text-primary"><span class="material-symbols-outlined">history_edu</span></div>
+<h2 class="text-gray-900 dark:text-white text-base font-bold leading-tight">History</h2>
+</div>
+</div>
+</section>
+<section class="py-8">
+<h2 class="text-gray-900 dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Personalized Recommendations</h2>
+<div class="p-4">
+<div class="flex border-b border-gray-200 dark:border-gray-700">
+<button class="px-4 py-2 -mb-px border-b-2 border-primary text-primary font-semibold">For Students</button>
+<button class="px-4 py-2 text-gray-500 dark:text-gray-400 hover:text-primary font-semibold">For Teachers</button>
+<button class="px-4 py-2 text-gray-500 dark:text-gray-400 hover:text-primary font-semibold">For Readers</button>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 py-6">
+<!-- Book Card Example -->
+<div class="flex flex-col gap-2 group">
+<img class="rounded-lg h-64 object-cover w-full group-hover:shadow-xl transition-shadow" data-alt="Book cover for 'The Midnight Library'" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARdQNkDkOpt0YYrRkZYMRE1To31_rm8vwFb4433nwIAGOD8b5qPGzB1E8vQ_w-5v08jvDr7oR_zmU_6Rr4mn5TqrZPu87E2m5Bk4CsTrJQZa5hNZR1CIm6GGEPSQqeZuNOcgU7BD6ljN2hOLmKMcz-X90k1V36cSDDsudZp9uW_jLFXiKV7aNLJAvmlT9_L-DlDNo1KLJrW79uBlKP80JM-BvL4YrLtR-MTez1gDNKYvZkd-SAVIhsTlkFEHa430f7PZr6e7TKOA"/>
+<h3 class="font-bold text-gray-900 dark:text-white">The Midnight Library</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400">Matt Haig</p>
+</div>
+<div class="flex flex-col gap-2 group">
+<img class="rounded-lg h-64 object-cover w-full group-hover:shadow-xl transition-shadow" data-alt="Book cover for 'Sapiens: A Brief History of Humankind'" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCd5taZAXMwWc6NX6nH59lZPtFRl2Ax1FA_hTjaIfr_4E260igyCCsvCH21Cg44-ZqNnHZCAfrUT49YU8QBetg27-c6DZtnIEl46VhmPAz-0No8NUYjQmL50wPBdUOPAVusa5iIPyprKjAQSzNdDegdaUZDXHyxXUBQHQMMc2OFlHPPD-qiSWOA3Nc3HfJ7gDn1wUlIF7CF8GGpu9CccTQbd3Enh-Q6oysFVbw3bb3ZUjwFtARV4PgRPAl9CN0bdrAqNVwol7slg"/>
+<h3 class="font-bold text-gray-900 dark:text-white">Sapiens</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400">Yuval Noah Harari</p>
+</div>
+<div class="flex flex-col gap-2 group">
+<img class="rounded-lg h-64 object-cover w-full group-hover:shadow-xl transition-shadow" data-alt="Book cover for 'Atomic Habits'" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbO-RZXo4U5KjYlF9oJandVDSrIqJQHElXhX9cqLJ8GqxorTeuyfCuCWGGTyJmYU5xFCMJtyqn6k8rq_VvTOyONbUY5LUBMj-H3aviCuOr7XmjaPpU2LlWjj3OGksuNPTN6A4150M3e-l77Qo0N6GlN-ZZb5-9vMtKA9do12qNv2JyFhFECtwxYiG6-Lc0tYGhX0llDbMQc2TO2Xrk5rHLQcnfYx9cTh3lxYfmY9Mmihc-qA2r7aGssxyspJpobITSt1IWiFFOCA"/>
+<h3 class="font-bold text-gray-900 dark:text-white">Atomic Habits</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400">James Clear</p>
+</div>
+<div class="flex flex-col gap-2 group">
+<img class="rounded-lg h-64 object-cover w-full group-hover:shadow-xl transition-shadow" data-alt="Book cover for 'Project Hail Mary'" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGkgAhc5Yn7NX7KMHimQrJ6Tg9bq298skY4xJsEAAXYhix4TEXZhIvsEqvteRk0JdGRosqgy9PcNSIV7yJBndJojsmrrwZ3d9vdeWHAJ8DaoJ5P-YbMS1YOAlLYQTwOGNt3KBB9x3DVz-rWrANOyrbRyTphVs-jVvaOSxljFx8OWpoZm55LV9_V3l-DMTSUug2hmNw8RpoXOSTcxV4myzR47mUrvX80TRJmIwhRpOrxlZp-fFH9_vS6qyf0wS3_yVaRpNHPUgBMw"/>
+<h3 class="font-bold text-gray-900 dark:text-white">Project Hail Mary</h3>
+<p class="text-sm text-gray-500 dark:text-gray-400">Andy Weir</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-8 bg-gray-100 dark:bg-gray-800/50 rounded-xl">
+<h2 class="text-gray-900 dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Trending Books</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 p-4">
+<div class="flex flex-col gap-2 group">
+<img class="rounded-lg h-56 object-cover w-full group-hover:shadow-xl transition-shadow" data-alt="Book cover for 'The Song of Achilles'" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcyXUBfXuZ57Gsq0gMpd3oClSm8IjG6VNolm0N1Dbgmi4Do63wak8t5U7-mFAVPvtoxhrdpYKlaxWPiYOLytPTQ2As1ieQESK2vYyk8RXpIGQWE8Vo7haCLpPgEhARWUN41VyfJH2iFWYTsrhv3l93sSBTXFswwu-E0Wd453WgKRPhrOTwkw5hEtZBuIsxtc9yh3LBBZKcJ2NFh8JO1fnAsr8ftSBXTQkcXhlMrZsagIS8rv8VGPSTKwOpWixOqZp6nbzL7UzOUQ"/>
+</div>
+<div class="flex flex-col gap-2 group">
+<img class="rounded-lg h-56 object-cover w-full group-hover:shadow-xl transition-shadow" data-alt="Book cover for 'Where the Crawdads Sing'" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRVzhDFfC2JKnTyXBqfzGfasoDnz8gklwJY4_xgShA2RJuLkSyOo2oNZxupEw4w2mD1HgCWiEYw9E4NZ-FXSzc3xDY3g2-qB9KoCHYIDbfnTtvBkinkP0zYd0W_G8bIIrXi1KkGUs4Qc7DImG4Ojgmqy8hEOQE39Q2E_DU7sqprEcgxJ6ygwLPSB9UV9O5gblY5N6CUNs-Lk0aEA0wl07lybVXzEGIfn9HwcOC9SBLiK36JD2wBlKUXW8Ci7uQnETE_HL5kG-w5w"/>
+</div>
+<div class="flex flex-col gap-2 group">
+<img class="rounded-lg h-56 object-cover w-full group-hover:shadow-xl transition-shadow" data-alt="Book cover for 'Dune'" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6_LFgn4oJyFHCMym8FJnYNPX4OcZ7WEWIAQC6nOicyGK25N48Zn2bD6NZETkOYoO-MaY2H8fo6nmkwYG5HmATWCVcjumlgWl6U7HthLzyZrDeetramYKPl7PG0S94GgzQS1v_KubtUdglI6Z_Rb8tytetoEZvrbgYdJIogs05WNDGh_o907GROJzE4YMcF89rp-L1diEOHvTIkAZUbiRsPMagNjpW7QV8urCaUDZ49vPWJRL9e7V-HdQUAbKMsV2D_Kh_29YQSA"/>
+</div>
+<div class="flex flex-col gap-2 group">
+<img class="rounded-lg h-56 object-cover w-full group-hover:shadow-xl transition-shadow" data-alt="Book cover for 'The Seven Husbands of Evelyn Hugo'" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXUNVqnI6wlk7ccdZlCKQaar4YuJ57GfS-0nwMcNjte6ehC44Rof7njFjq4dnPgb3wPxDpcYJql_QaLRfqFRtFcoLGcY0a7BINNLP09AEmva8GkBWs0CJ2xvMvpfYaKtdLpsfyejRw6apiJg7Arpyy68p0y6f4LmnTmphkNjeVMyKt8ayVaKBhaeTS6VsatRg9qbNIvLtotNF9VXlfH8c562Kd7a2gMlOGblyvIRvkOfmjWFASkbxkYtU5BW2kjbc72ibNwgiEWw"/>
+</div>
+<div class="flex flex-col gap-2 group">
+<img class="rounded-lg h-56 object-cover w-full group-hover:shadow-xl transition-shadow" data-alt="Book cover for 'Klara and the Sun'" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTfqn8B0-2qhSvQF4BqD55DbHgDPt85noxjVbjgqE5reyGxDxnB-uZdW0l07m6VD4nGX_omK3sUAZBV6GpFOUQ6GfVOE_A7iJpc44Jm00zPG2rQ5wdkCxXrxTerUQ4MN_ZH9Hi_eGOSmNsAV5Huph6o6jRojgDCdYFoEFAXhJPM5G0NjXLwLH-rXffEwD6dYBRLSk45HMftde0K1Lcnr3Q4jfa2j5eeNr9WtrnlPfFl0IZk0hdGJeuBhtUbsZVKdafFd3nZy5A1w"/>
+</div>
+</div>
+</section>
+</main>
+<footer class="mt-16 border-t border-gray-200 dark:border-gray-700 pt-8 pb-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-4">
+<div class="col-span-1">
+<h3 class="font-bold text-lg text-gray-900 dark:text-white">Contact Us</h3>
+<p class="text-gray-500 dark:text-gray-400 mt-2">123 Library St.<br/>Bookville, BK 12345<br/>contact@smartlibrary.com</p>
+</div>
+<div class="col-span-1">
+<h3 class="font-bold text-lg text-gray-900 dark:text-white">Social Media</h3>
+<div class="flex gap-4 mt-2">
+<a class="text-gray-500 dark:text-gray-400 hover:text-primary" href="#">X</a>
+<a class="text-gray-500 dark:text-gray-400 hover:text-primary" href="#">Facebook</a>
+<a class="text-gray-500 dark:text-gray-400 hover:text-primary" href="#">Instagram</a>
+</div>
+</div>
+<div class="col-span-2">
+<h3 class="font-bold text-lg text-gray-900 dark:text-white">Newsletter</h3>
+<p class="text-gray-500 dark:text-gray-400 mt-2 mb-4">Stay updated with our new arrivals and features.</p>
+<div class="flex gap-2">
+<input class="form-input flex-1 rounded-lg border-gray-300 dark:border-gray-600 bg-background-light dark:bg-background-dark text-gray-900 dark:text-white focus:ring-primary focus:border-primary" placeholder="Your email address" type="email"/>
+<button class="px-4 py-2 bg-primary text-white rounded-lg font-semibold hover:bg-primary/90 transition-colors">Subscribe</button>
+</div>
+</div>
+</div>
+<div class="text-center text-gray-500 dark:text-gray-400 mt-8 pt-8 border-t border-gray-200 dark:border-gray-700">
+                            © 2024 Smart Digital Library. All Rights Reserved.
+                        </div>
+</footer>
+</div>
+</div>
+</div>
+</div>
+</body></html>

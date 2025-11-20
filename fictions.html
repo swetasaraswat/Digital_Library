@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Smart Digital Library - Fiction</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13a4ec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101c22",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e7eff3] dark:border-b-gray-700 px-4 md:px-10 py-3 bg-white dark:bg-background-dark sticky top-0 z-50">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-[#0d171b] dark:text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-[#0d171b] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Smart Digital Library</h2>
+</div>
+<div class="hidden md:flex items-center gap-9">
+<a class="text-[#0d171b] dark:text-gray-300 text-sm font-medium leading-normal" href="index.html">Home</a>
+<a class="text-primary dark:text-primary text-sm font-medium leading-normal" href="books.html">Browse</a>
+<a class="text-[#0d171b] dark:text-gray-300 text-sm font-medium leading-normal" href="#">My Books</a>
+<a class="text-[#0d171b] dark:text-gray-300 text-sm font-medium leading-normal" href="#">Community</a>
+</div>
+</div>
+<div class="flex flex-1 justify-end gap-4 items-center">
+<label class="hidden sm:flex flex-col min-w-40 !h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-[#4c809a] dark:text-gray-400 flex border-none bg-[#e7eff3] dark:bg-gray-800 items-center justify-center pl-4 rounded-l-lg border-r-0">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#0d171b] dark:text-white focus:outline-0 focus:ring-0 border-none bg-[#e7eff3] dark:bg-gray-800 focus:border-none h-full placeholder:text-[#4c809a] dark:placeholder:text-gray-400 px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal" placeholder="Search" value=""/>
+</div>
+</label>
+<div class="flex gap-2">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-slate-50 text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Login</span>
+</button>
+<button class="hidden sm:flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#e7eff3] dark:bg-gray-800 text-[#0d171b] dark:text-white text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Sign Up</span>
+</button>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User profile picture, an abstract gradient" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAT8IeyKicmNzAbZc56NnIodM5Qg6Otjidmq14dqs7VeYP0G7dKm666-5TNdgBepfh7enbVXLq29mNKkBV8tDfbg7QVgxeFy7Nnk44aaPebcHHFbRWv_2WvJJkH1FcOlh5kzTmVcBWEA5b7kQVhKekGZC8ruHSR-Oa0vzcX_82UrAkvE2R_jrrX-6vo3CEeZWWplm2Cx5dbvHHiSnVuDyKE5JClRVq7yimS6OFGeBoTSo3hcY-Yfa3nbp9SK3q7NcVvsZCYCKN7qQ");'></div>
+</div>
+</header>
+<main class="px-4 md:px-10 lg:px-20 xl:px-40 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col max-w-[1280px] flex-1">
+<div class="flex flex-wrap gap-2 p-4">
+<a class="text-[#4c809a] dark:text-gray-400 text-base font-medium leading-normal" href="#">Home</a>
+<span class="text-[#4c809a] dark:text-gray-400 text-base font-medium leading-normal">/</span>
+<a class="text-[#4c809a] dark:text-gray-400 text-base font-medium leading-normal" href="#">Browse</a>
+<span class="text-[#4c809a] dark:text-gray-400 text-base font-medium leading-normal">/</span>
+<span class="text-[#0d171b] dark:text-white text-base font-medium leading-normal">Fiction</span>
+</div>
+<div class="flex flex-wrap justify-between gap-3 p-4">
+<p class="text-[#0d171b] dark:text-white text-4xl font-black leading-tight tracking-[-0.033em] min-w-72">Fiction</p>
+</div>
+<div class="flex flex-col gap-6 p-4">
+<div class="flex items-center justify-between">
+<h2 class="text-2xl font-bold text-[#0d171b] dark:text-white tracking-tight">New Releases</h2>
+<a class="text-sm font-bold text-primary hover:underline flex items-center gap-1" href="#">
+<span>View All</span>
+<span class="material-symbols-outlined text-lg">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+<div class="group relative flex flex-col rounded-lg overflow-hidden bg-white dark:bg-gray-800 shadow-md hover:shadow-xl transition-shadow duration-300">
+<div class="relative">
+<img class="w-full h-64 object-cover" data-alt="Book cover of The Heaven &amp; Earth Grocery Store" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhYCb4eA6ez_VJQqwRKYOMyUvmAMdmkuqr3aeb3XvPL_3hCtehoE0ST3fNTsmVyrNnrp2QmMP58R-8I8Gdkl_2aZkcS9UcrUQGc8usRI3EQFNUIdfhMBdtKivZ9o74IT-AJyiiD0hTTdJBWuQy2SRBDEIxhzfaivy8ckx4eqQT8yTIS56pH88lvMVoRI_0HlTzsK9NfnT92OrT2kG21nxBDk-mHTtT_KMMPN6Zk-mmgGpmp9TghDy6LlzbW9bHythdYJ-5G0DlPQ"/>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<button class="flex items-center justify-center gap-2 h-10 px-4 bg-primary text-white rounded-lg text-sm font-bold">
+<span class="material-symbols-outlined">add</span>
+<span>Add to My Books</span>
+</button>
+</div>
+<span class="absolute top-2 left-2 bg-primary/90 text-white text-xs font-bold px-2 py-1 rounded">NEW</span>
+</div>
+<div class="p-4 flex-1 flex flex-col">
+<h3 class="text-md font-bold text-[#0d171b] dark:text-white">The Heaven &amp; Earth Grocery Store</h3>
+<p class="text-sm text-[#4c809a] dark:text-gray-400">James McBride</p>
+</div>
+</div>
+<div class="group relative flex flex-col rounded-lg overflow-hidden bg-white dark:bg-gray-800 shadow-md hover:shadow-xl transition-shadow duration-300">
+<div class="relative">
+<img class="w-full h-64 object-cover" data-alt="Book cover of Fourth Wing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIgTC7Xl0YHBSW8pwUzSOyHE5GgW7yeHSA8vMZy8W4Cpos5DZ9H4rL9R664_vweoFuTXBCcuPZloLGCXP-QXCwgISwSfH_r1wSz2nRIFRG7AuW1xLXtk92Ub_Pgyc9nps1t_STLScva8sJI5iFtOKdgLGTLJEEuIOPgv_XLCDzaKQaTjglXeO3C2ZPsuBtWJfQIVJJ76J-DbAkUPm6sZbEsperQREtjddLgAANAlCotKY_vIeQ3pUQdTbh5jpHPH0QcoxUaLbygw"/>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<button class="flex items-center justify-center gap-2 h-10 px-4 bg-primary text-white rounded-lg text-sm font-bold">
+<span class="material-symbols-outlined">add</span>
+<span>Add to My Books</span>
+</button>
+</div>
+<span class="absolute top-2 left-2 bg-primary/90 text-white text-xs font-bold px-2 py-1 rounded">NEW</span>
+</div>
+<div class="p-4 flex-1 flex flex-col">
+<h3 class="text-md font-bold text-[#0d171b] dark:text-white">Fourth Wing</h3>
+<p class="text-sm text-[#4c809a] dark:text-gray-400">Rebecca Yarros</p>
+</div>
+</div>
+<div class="group relative hidden lg:flex flex-col rounded-lg overflow-hidden bg-white dark:bg-gray-800 shadow-md hover:shadow-xl transition-shadow duration-300">
+<div class="relative">
+<img class="w-full h-64 object-cover" data-alt="Book cover of Tom Lake" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBT5BO-RQysCFZ7mJj2eBWuVeU2Y-R9pNicQRCidKER48uIqOp4UXHjr1ZVDBpqHFdEkRKh9vi3f-OWtPRCpLpXppcZ3aGxZsmc47ZdMyDIPdE4gLMyntYAKWDKQuajuVLIQ1TX8-2Sf0IJDAkS2qRW3h6tdJA8QYbMg3jnFUbO-qIXrFfij0w6Qq7iNYA5cETTLifUOWhEkGT9sPNTLmUXW_m7oLH8zNWmwX7cC7m3CTkwawA-lG_u7g59g8mPQ_98-E74sbqwOA"/>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<button class="flex items-center justify-center gap-2 h-10 px-4 bg-primary text-white rounded-lg text-sm font-bold">
+<span class="material-symbols-outlined">add</span>
+<span>Add to My Books</span>
+</button>
+</div>
+<span class="absolute top-2 left-2 bg-primary/90 text-white text-xs font-bold px-2 py-1 rounded">NEW</span>
+</div>
+<div class="p-4 flex-1 flex flex-col">
+<h3 class="text-md font-bold text-[#0d171b] dark:text-white">Tom Lake</h3>
+<p class="text-sm text-[#4c809a] dark:text-gray-400">Ann Patchett</p>
+</div>
+</div>
+<div class="group relative hidden xl:flex flex-col rounded-lg overflow-hidden bg-white dark:bg-gray-800 shadow-md hover:shadow-xl transition-shadow duration-300">
+<div class="relative">
+<img class="w-full h-64 object-cover" data-alt="Book cover of The Covenant of Water" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrEXC7EVS1GaQoH9HRonttP1L1YNc-Vh1dRPjBAPd25b-1ksfGZbBRrY6e-XTQyUEFlPcYfdp5R9V7NNYOHD0EGcvxoEm07tj_Ei5QJeRthsFVZ1QIVpqxytQ9VAWPX1GQxAP7UuoI619YNAn89LJHWMhc3Xz4eyRoPwmwysGgwAnpA0VPTNG3jSPUo2vpq1Vj6E9Sg2tYlByKlZOXRwKYyEmw-gaMvmLeq7SKWDrA3PhGEa_tZF1Jc8VaCP97dRdPfAzCY2ot3g"/>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<button class="flex items-center justify-center gap-2 h-10 px-4 bg-primary text-white rounded-lg text-sm font-bold">
+<span class="material-symbols-outlined">add</span>
+<span>Add to My Books</span>
+</button>
+</div>
+<span class="absolute top-2 left-2 bg-primary/90 text-white text-xs font-bold px-2 py-1 rounded">NEW</span>
+</div>
+<div class="p-4 flex-1 flex flex-col">
+<h3 class="text-md font-bold text-[#0d171b] dark:text-white">The Covenant of Water</h3>
+<p class="text-sm text-[#4c809a] dark:text-gray-400">Abraham Verghese</p>
+</div>
+</div>
+</div>
+</div>
+<div class="pb-3 overflow-x-auto">
+<div class="flex border-b border-[#cfdfe7] dark:border-gray-700 px-4 gap-8 whitespace-nowrap">
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-primary text-[#0d171b] dark:text-white pb-[13px] pt-4" href="#">
+<p class="text-[#0d171b] dark:text-white text-sm font-bold leading-normal tracking-[0.015em]">Fantasy</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#4c809a] dark:text-gray-400 hover:text-primary dark:hover:text-primary pb-[13px] pt-4" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Mystery</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#4c809a] dark:text-gray-400 hover:text-primary dark:hover:text-primary pb-[13px] pt-4" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Romance</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#4c809a] dark:text-gray-400 hover:text-primary dark:hover:text-primary pb-[13px] pt-4" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Historical</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#4c809a] dark:text-gray-400 hover:text-primary dark:hover:text-primary pb-[13px] pt-4" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Horror</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#4c809a] dark:text-gray-400 hover:text-primary dark:hover:text-primary pb-[13px] pt-4" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Thriller/Suspense</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#4c809a] dark:text-gray-400 hover:text-primary dark:hover:text-primary pb-[13px] pt-4" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Dystopian</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#4c809a] dark:text-gray-400 hover:text-primary dark:hover:text-primary pb-[13px] pt-4" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Literary Fiction</p>
+</a>
+</div>
+</div>
+<div class="flex gap-3 p-4 overflow-x-auto">
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-primary/20 dark:bg-primary/30 pl-4 pr-2">
+<p class="text-primary dark:text-white text-sm font-medium leading-normal">Novel</p>
+<span class="material-symbols-outlined text-primary dark:text-white text-lg">close</span>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#e7eff3] dark:bg-gray-800 pl-4 pr-2">
+<p class="text-[#0d171b] dark:text-gray-300 text-sm font-medium leading-normal">Novella</p>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#e7eff3] dark:bg-gray-800 pl-4 pr-2">
+<p class="text-[#0d171b] dark:text-gray-300 text-sm font-medium leading-normal">Short Story</p>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#e7eff3] dark:bg-gray-800 pl-4 pr-2">
+<p class="text-[#0d171b] dark:text-gray-300 text-sm font-medium leading-normal">Graphic Novel</p>
+</button>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 p-4">
+<div class="group relative flex flex-col rounded-lg overflow-hidden bg-white dark:bg-gray-800 shadow-md hover:shadow-xl transition-shadow duration-300">
+<div class="relative">
+<img class="w-full h-64 object-cover" data-alt="Book cover of The Midnight Library" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmNhuB2uZim0VX4uv6FWZkHSUovLNN2DJHJYQr2zhndXi6gzz6QYrfTWCKRVKJA6tkUSJdGyMG0d6agxY4KXRwbgny_B9-eLBEOYsHwy0nOQx_jKqocfIKsmvAS_YzoRtxS1XpPR7nJBsYIC0vocSlWhx0exKLHsFLiT58RzmOgk1V9kHmW_CSImOHqkkB7nIStok2Gbfgda87qsNipO8DG8wt2VVdCuGPwUNs4DORzJAemnL8ey-L9_noC_729BNuBmRpvCCm3g"/>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<button class="flex items-center justify-center gap-2 h-10 px-4 bg-primary text-white rounded-lg text-sm font-bold">
+<span class="material-symbols-outlined">add</span>
+<span>Add to My Books</span>
+</button>
+</div>
+<span class="absolute top-2 right-2 bg-primary/80 text-white text-xs font-bold px-2 py-1 rounded">Novel</span>
+</div>
+<div class="p-4 flex-1 flex flex-col">
+<h3 class="text-md font-bold text-[#0d171b] dark:text-white">The Midnight Library</h3>
+<p class="text-sm text-[#4c809a] dark:text-gray-400">Matt Haig</p>
+</div>
+</div>
+<div class="group relative flex flex-col rounded-lg overflow-hidden bg-white dark:bg-gray-800 shadow-md hover:shadow-xl transition-shadow duration-300">
+<div class="relative">
+<img class="w-full h-64 object-cover" data-alt="Book cover of The Name of the Wind" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQ5rQ1nG4xIhv0OqCUZYRuNgyRq2fABW7skRiGTyw6jiSKT5EC2NOVb4-prQhN79lVx6yVGuEAvwSnX6MVSV7_voJ6naEoQ56qWKyfrcu_oIEeOkNSq8p12sSQf81kCu42Se-qdjnAwlswVNIi-N2OikMqtSvWm5XGE7PVF-oT9Cod6ZEuhQsYIfmyA8kFBnBLFbxibWttcyyFcu8A7eua9J-3VSWmzs1VwQkAhnxpVM8WjFUGqq482itfvsvXEfSpaxIV75XCgA"/>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<button class="flex items-center justify-center gap-2 h-10 px-4 bg-primary text-white rounded-lg text-sm font-bold">
+<span class="material-symbols-outlined">add</span>
+<span>Add to My Books</span>
+</button>
+</div>
+<span class="absolute top-2 right-2 bg-primary/80 text-white text-xs font-bold px-2 py-1 rounded">Novel</span>
+</div>
+<div class="p-4 flex-1 flex flex-col">
+<h3 class="text-md font-bold text-[#0d171b] dark:text-white">The Name of the Wind</h3>
+<p class="text-sm text-[#4c809a] dark:text-gray-400">Patrick Rothfuss</p>
+</div>
+</div>
+<div class="group relative flex flex-col rounded-lg overflow-hidden bg-white dark:bg-gray-800 shadow-md hover:shadow-xl transition-shadow duration-300">
+<div class="relative">
+<img class="w-full h-64 object-cover" data-alt="Book cover of Circe" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkDEc3-xIjiuvkso2n3eyC-YfLlDNAdmzXXInIZy-AGPi4kZQGo5TYLYQF4eb4xH8ONjLlQUH3jMefyy_QWJuL32xcL-amSFdKQhjSvKOuHx-aGoiFtbF-sq9D1G-VToVRoTLzjH9zohGFoaSH4_ZbD-I9JH5Z2PGB62SvjmKhjV1NooOd0Ugdv4zjB0jFRXPXMHAISV0BySzise5Y_VYItUEKM_w-ZJX5bqR_76cPbjBEHAvRxz3JimkOGXVIGUZ1SjaboQ0rmA"/>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<button class="flex items-center justify-center gap-2 h-10 px-4 bg-primary text-white rounded-lg text-sm font-bold">
+<span class="material-symbols-outlined">add</span>
+<span>Add to My Books</span>
+</button>
+</div>
+<span class="absolute top-2 right-2 bg-primary/80 text-white text-xs font-bold px-2 py-1 rounded">Novel</span>
+</div>
+<div class="p-4 flex-1 flex flex-col">
+<h3 class="text-md font-bold text-[#0d171b] dark:text-white">Circe</h3>
+<p class="text-sm text-[#4c809a] dark:text-gray-400">Madeline Miller</p>
+</div>
+</div>
+<div class="group relative flex flex-col rounded-lg overflow-hidden bg-white dark:bg-gray-800 shadow-md hover:shadow-xl transition-shadow duration-300">
+<div class="relative">
+<img class="w-full h-64 object-cover" data-alt="Book cover of Project Hail Mary" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnmnkAWRLsqRtsprf76l988LBoYerqvoHhK25aDg7LW2jNnjN5Cgz4gvQMo8EZr5RUzGGsXT8BdLIRbMwhkzygCVWZnxgHfMxWr1O2tf4ydWIAZoR4fsaIK-vSy-zFyg-c4Yaog5xBB_BdZCSO6rFE02MYEzh9I0TYrUcwuHXpbdVjAwWXeCJ8S22A3P5wgW3Ia2JA02-6wQPkXg9ZOdZpkN6LEPDTWQSIwfR8ur6iVHVhhU3IpwODOEA8UPslRK0APEv_ybEY5Q"/>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<button class="flex items-center justify-center gap-2 h-10 px-4 bg-primary text-white rounded-lg text-sm font-bold">
+<span class="material-symbols-outlined">add</span>
+<span>Add to My Books</span>
+</button>
+</div>
+<span class="absolute top-2 right-2 bg-primary/80 text-white text-xs font-bold px-2 py-1 rounded">Novel</span>
+</div>
+<div class="p-4 flex-1 flex flex-col">
+<h3 class="text-md font-bold text-[#0d171b] dark:text-white">Project Hail Mary</h3>
+<p class="text-sm text-[#4c809a] dark:text-gray-400">Andy Weir</p>
+</div>
+</div>
+<div class="group relative flex flex-col rounded-lg overflow-hidden bg-white dark:bg-gray-800 shadow-md hover:shadow-xl transition-shadow duration-300">
+<div class="relative">
+<img class="w-full h-64 object-cover" data-alt="Book cover of Klara and the Sun" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAB8IxhFk-GmKod6DtGMfZVQ1NqY4hLLkzq6AfGMcO33OKlkN-EajDqP6yLsu4QJohlkC1WcTq4AFNwvss4lKM9xfnTDR4SaKnAxCWJaQkW6GAYoqxMGG7vNr5seYOit2oRg7a6xAte_wSNPL5Eerd8OvyOuW5mjkzJQ8oa1645Kt4EgFixwSGdfjX1dA4Iq19KryQ_KHRwJhT3WnhMhKqSx6EKzvYloski3ND_KJftMdEiAlZw2eiJT2VgLJoVPdo6L4xWo1v2gQ"/>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<button class="flex items-center justify-center gap-2 h-10 px-4 bg-primary text-white rounded-lg text-sm font-bold">
+<span class="material-symbols-outlined">add</span>
+<span>Add to My Books</span>
+</button>
+</div>
+<span class="absolute top-2 right-2 bg-primary/80 text-white text-xs font-bold px-2 py-1 rounded">Novel</span>
+</div>
+<div class="p-4 flex-1 flex flex-col">
+<h3 class="text-md font-bold text-[#0d171b] dark:text-white">Klara and the Sun</h3>
+<p class="text-sm text-[#4c809a] dark:text-gray-400">Kazuo Ishiguro</p>
+</div>
+</div>
+<div class="group relative flex flex-col rounded-lg overflow-hidden bg-white dark:bg-gray-800 shadow-md hover:shadow-xl transition-shadow duration-300">
+<div class="relative">
+<img class="w-full h-64 object-cover" data-alt="Book cover of Dune" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjA3lZbkshYWq1F1rYKCcsRm5So5y3ZgWYoqTL7kkC0SFYk3U1P6b7cKmQoxNeRKJxNc487iqhD3UINPA6buRhmwk2MfL6Gly05vs6_1wwrjubaO0P3TSYPrRo_78R2tY9uJDLXKwtdDiVGW3vU6teq2zm_nvyCBGsKRfaAwVpz6sX9Oqp4p4BNa507nJc8TVYMHa_S74eTwULyP3S8WEiVh7UKJb4Kin6bXJIZDCOkt5-FHRVeJK6s_OIy057PuQeTN3uQYo4Bw"/>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<button class="flex items-center justify-center gap-2 h-10 px-4 bg-primary text-white rounded-lg text-sm font-bold">
+<span class="material-symbols-outlined">add</span>
+<span>Add to My Books</span>
+</button>
+</div>
+<span class="absolute top-2 right-2 bg-primary/80 text-white text-xs font-bold px-2 py-1 rounded">Novel</span>
+</div>
+<div class="p-4 flex-1 flex flex-col">
+<h3 class="text-md font-bold text-[#0d171b] dark:text-white">Dune</h3>
+<p class="text-sm text-[#4c809a] dark:text-gray-400">Frank Herbert</p>
+</div>
+</div>
+<div class="group relative flex flex-col rounded-lg overflow-hidden bg-white dark:bg-gray-800 shadow-md hover:shadow-xl transition-shadow duration-300">
+<div class="relative">
+<img class="w-full h-64 object-cover" data-alt="Book cover of The Lord of the Rings" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8yw_IRV78lSqKov4IWXfNfqkIW9U3hOUHKWrFrlp7sufSnlTw6mymFWaizIy6DQUEYUf3Szi9a0o7pP9Bv1nFIzDbk_sTTzZjSJY4MHlmgJgCKGVRwuxT-xM_ifkoyZuI-QpZ-9GlOuoq7zaTEphYxxvsbqdTVWihPT3aXplTmrlLyio9AH6sy4RQTbfhS_cxA__RoWoG15TK8PvEjM76vMFByyd3m1-C5l_PAsAj4zxmAPGGeEE9WzDEvDsUkZ7cg6rqtbJkzQ"/>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<button class="flex items-center justify-center gap-2 h-10 px-4 bg-primary text-white rounded-lg text-sm font-bold">
+<span class="material-symbols-outlined">add</span>
+<span>Add to My Books</span>
+</button>
+</div>
+<span class="absolute top-2 right-2 bg-primary/80 text-white text-xs font-bold px-2 py-1 rounded">Novel</span>
+</div>
+<div class="p-4 flex-1 flex flex-col">
+<h3 class="text-md font-bold text-[#0d171b] dark:text-white">The Lord of the Rings</h3>
+<p class="text-sm text-[#4c809a] dark:text-gray-400">J.R.R. Tolkien</p>
+</div>
+</div>
+<div class="group relative flex flex-col rounded-lg overflow-hidden bg-white dark:bg-gray-800 shadow-md hover:shadow-xl transition-shadow duration-300">
+<div class="relative">
+<img class="w-full h-64 object-cover" data-alt="Book cover of A Game of Thrones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDr0s1cKDUMD_XGnCGG1DSPIJOV_bU-jHVI80AOxE5Zbqo1EImkxPUBETr3iZRnEeeL8YaWHguOKZBKp4TgzJkwLoRqlXE1MevrdX1aHXIrFBON3agR-fmgYwOiuBaeWBaKQxWbolm7WbWcj_cZmZLvJ7m_Y8Ja7B_B2IUCT-n2qv8Hjy2prk9iTMn_zYRvhQ0ScGI6dhMXtjfL3qJRASHd4StVRiDVvBByTISDf2xWUl-U46Az9YiU6BM_muDEFgVlfrDv6UfCWw"/>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<button class="flex items-center justify-center gap-2 h-10 px-4 bg-primary text-white rounded-lg text-sm font-bold">
+<span class="material-symbols-outlined">add</span>
+<span>Add to My Books</span>
+</button>
+</div>
+<span class="absolute top-2 right-2 bg-primary/80 text-white text-xs font-bold px-2 py-1 rounded">Novel</span>
+</div>
+<div class="p-4 flex-1 flex flex-col">
+<h3 class="text-md font-bold text-[#0d171b] dark:text-white">A Game of Thrones</h3>
+<p class="text-sm text-[#4c809a] dark:text-gray-400">George R.R. Martin</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>
